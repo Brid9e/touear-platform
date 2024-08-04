@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev # 指定激活的环境配置文件
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
