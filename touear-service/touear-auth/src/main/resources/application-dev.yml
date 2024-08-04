@@ -8,4 +8,4 @@ spring:
       discovery:
         server-addr: 121.41.87.122:8848
   application:
-    name: touear-manage
+    name: touear-auth

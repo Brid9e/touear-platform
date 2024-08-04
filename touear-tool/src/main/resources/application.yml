@@ -1,5 +1,5 @@
 minio:
-  endpoint: http://localhost:9000 # MinIO 服务器地址
+  endpoint: http://121.41.87.122:9000 # MinIO 服务器地址
   access-key: minioadmin # 访问密钥
   secret-key: minioadmin # 秘密密钥
   bucket: your-bucket-name # 默认桶名（可以在代码中创建桶）

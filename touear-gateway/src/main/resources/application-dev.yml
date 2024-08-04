@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: touear-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.41.87.122:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes[0]:
+        id: touear-manage
+        uri: lb://touear-manage
+        predicates: Path=/*/manage/**
+      routes[1]:
+        id: touear-auth
+        uri: lb://touear-auth
+        predicates: Path=/*/auth/**
+      routes[2]:
+        id: touear-client
+        uri: lb://touear-client
+        predicates: Path=/*/client/**

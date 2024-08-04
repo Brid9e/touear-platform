@@ -1,0 +1,5 @@
+server:
+  port: 8555
+spring:
+  profiles:
+    active: dev
