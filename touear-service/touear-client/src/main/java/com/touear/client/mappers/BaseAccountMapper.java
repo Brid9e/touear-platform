@@ -1,4 +1,4 @@
-package com.touear.client.mapper;
+package com.touear.client.mappers;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.touear.manage.entity.BaseAccount;

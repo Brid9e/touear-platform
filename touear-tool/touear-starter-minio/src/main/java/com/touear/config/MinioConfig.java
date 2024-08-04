@@ -1,4 +1,4 @@
-package com.touear.tool.config;
+package com.touear.config;
 
 import com.touear.tool.service.MinioToolService;
 import io.minio.MinioClient;

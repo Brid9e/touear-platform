@@ -4,7 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.touear</groupId>
     <artifactId>touear-tool</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
+    <modules>
+        <module>touear-starter-mybatis</module>
+        <module>touear-starter-minio</module>
+    </modules>
     <name>touear-tool</name>
     <description>底层工具包</description>
     <parent>

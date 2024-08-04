@@ -1,4 +1,4 @@
-package com.touear.manage.mapper;
+package com.touear.manage.mappers;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
