@@ -6,9 +6,16 @@
     <artifactId>touear-tool</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+
+    <parent>
+        <artifactId>touear-platform</artifactId>
+        <groupId>com.touear</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
     <modules>
         <module>touear-starter-mybatis</module>
         <module>touear-starter-minio</module>
+        <module>touear-core-oss</module>
     </modules>
     <name>touear-tool</name>
     <description>底层工具包</description>
@@ -26,6 +33,11 @@
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>
             <version>8.5.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

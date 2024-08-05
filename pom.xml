@@ -29,6 +29,7 @@
         <mybatis-plus.version>3.4.1</mybatis-plus.version>
         <mysql.version>8.0.33</mysql.version>
         <swagger.version>2.9.2</swagger.version>
+        <swagger.models.version>1.5.21</swagger.models.version>
         <jwt.version>0.7.0</jwt.version>
         <fastjson.version>1.2.29</fastjson.version>
         <httpclient.version>4.5.1</httpclient.version>
