@@ -5,11 +5,10 @@
     <parent>
         <groupId>com.touear</groupId>
         <artifactId>touear-service</artifactId>
-        <version>1.0.0</version>
+        <version>4.0.0.ALPHA</version>
     </parent>
     <groupId>com.touear</groupId>
     <artifactId>touear-client</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>touear-client</name>
     <description>用户端服务</description>
 

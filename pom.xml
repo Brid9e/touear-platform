@@ -18,9 +18,9 @@
     </parent>
     <groupId>com.touear</groupId>
     <artifactId>touear-platform</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>touear_platform</name>
-    <description>touear_platform</description>
+    <version>4.0.0.ALPHA</version>
+    <name>touear-platform</name>
+    <description>touear-platform</description>
     <properties>
         <skipTests>true</skipTests>
         <java.version>1.8</java.version>
@@ -39,6 +39,8 @@
         <jwt.version>0.7.0</jwt.version>
         <xxl-job.version>2.3.0</xxl-job.version>
         <aliyun.oss.version>3.9.0</aliyun.oss.version>
+        <touear.tool.version>1.0.0</touear.tool.version>
+        <touear.project.version>4.0.0.ALPHA</touear.project.version>
     </properties>
     <!--配置dependencyManagement锁定依赖的版本-->
     <dependencyManagement>

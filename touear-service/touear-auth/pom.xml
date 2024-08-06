@@ -5,11 +5,10 @@
     <parent>
         <groupId>com.touear</groupId>
         <artifactId>touear-service</artifactId>
-        <version>1.0.0</version><!-- 可选的相对路径 -->
+        <version>4.0.0.ALPHA</version>
     </parent>
     <groupId>com.touear</groupId>
     <artifactId>touear-auth</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>touear-auth</name>
     <description>登录服务</description>
 </project>

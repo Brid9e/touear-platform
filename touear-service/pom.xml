@@ -2,17 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.touear</groupId>
-    <artifactId>touear-service</artifactId>
-    <version>1.0.0</version>
-    <name>touear-service</name>
-    <description>touear-service</description>
-    <packaging>pom</packaging>
     <parent>
         <artifactId>touear-platform</artifactId>
         <groupId>com.touear</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>4.0.0.ALPHA</version>
     </parent>
+
+    <groupId>com.touear</groupId>
+    <artifactId>touear-service</artifactId>
+    <name>touear-service</name>
     <modules>
         <module>touear-auth</module>
         <module>touear-client</module>
@@ -23,7 +21,7 @@
         <dependency>
             <groupId>com.touear</groupId>
             <artifactId>touear-common</artifactId>
-            <version>1.0.0</version>
+            <version>${touear.project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.touear</groupId>
