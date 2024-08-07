@@ -2,7 +2,6 @@ package com.touear.manage.controller;
 
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.touear.common.utils.R;
 import com.touear.manage.entity.BaseLabelsEntity;
 import com.touear.manage.service.BaseLabelsService;
 import com.touear.manage.vo.BaseLabelsVo;
@@ -15,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.touear.support.Condition;
 import javax.management.Query;
-import java.util.List;
 
 
 @Api(tags = "标签")

@@ -5,16 +5,50 @@
     <parent>
         <groupId>com.touear</groupId>
         <artifactId>touear-service</artifactId>
-        <version>4.0.0.ALPHA</version>
+        <version>1.0.0</version>
     </parent>
     <groupId>com.touear</groupId>
     <artifactId>touear-manage</artifactId>
     <name>touear-manage</name>
+    <version>${touear.project.version}</version>
     <description>管理端服务</description>
     <dependencies>
         <dependency>
             <groupId>com.touear</groupId>
+            <artifactId>touear-common</artifactId>
+            <version>${touear.project.version}</version>
+        </dependency>
+
+        <!--web 需要启动项目-->
+        <dependency>
+            <groupId>com.touear</groupId>
             <artifactId>touear-core-cloud</artifactId>
+            <version>${touear.tool.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-starter-swagger</artifactId>
+            <version>${touear.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-starter-mybatis</artifactId>
+            <version>${touear.tool.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-starter-mq</artifactId>
             <version>${touear.tool.version}</version>
         </dependency>
         <dependency>
@@ -34,11 +68,7 @@
             <artifactId>touear-starter-swagger</artifactId>
             <version>${touear.tool.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.touear</groupId>
-            <artifactId>touear-starter-mybatis</artifactId>
-            <version>${touear.tool.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>com.touear</groupId>
             <artifactId>touear-starter-minio</artifactId>
@@ -48,6 +78,11 @@
             <groupId>com.touear</groupId>
             <artifactId>touear-core-oss</artifactId>
             <version>${touear.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-manage-api</artifactId>
+            <version>${touear.project.version}</version>
         </dependency>
     </dependencies>
 

@@ -1,7 +1,8 @@
 package com.touear.client.mappers;
 
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.touear.manage.entity.BaseAccount;
+import com.touear.entity.BaseAccount;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

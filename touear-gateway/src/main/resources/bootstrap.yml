@@ -1,0 +1,35 @@
+server:
+  port: 8787
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+    loadbalancer:
+      retry:
+        enabled: true
+    bus:
+      trace:
+        enabled: true     # 开启cloud bus的跟踪        
+    nacos:
+      config:
+        server-addr: 121.41.87.122:8848
+        namespace: saas
+#        username: nacos
+#        password: nacos
+      discovery:
+        server-addr: 121.41.87.122:8848
+        namespace: saas
+#        ip: 10.8.98.15
+
+touear:
+  document:
+    resources:
+      - name: 登录授权模块
+        location: /touear-auth
+      - name: 管理端服务
+        location: /touear-manage
+      - name: 用户端服务
+        location: /touear-client

@@ -1,14 +1,15 @@
 package com.touear.manage.controller;
 
-import com.google.protobuf.ServiceException;
+import com.touear.common.constant.ParamTypeContant;
 import com.touear.common.enums.FileType;
 import com.touear.common.enums.MinioBucketEnum;
 import com.touear.common.enums.ServiceType;
 import com.touear.common.utils.FileUploadValidator;
-import com.touear.common.utils.R;
 import com.touear.core.oss.props.OssProperties;
-import com.touear.core.oss.utils.Func;
-import com.touear.core.oss.utils.StringPool;
+import com.touear.core.tool.api.R;
+import com.touear.core.tool.api.ResultCode;
+import com.touear.core.tool.exception.ServiceException;
+import com.touear.core.tool.utils.Func;
 import com.touear.manage.entity.BaseSysconfig;
 import com.touear.manage.service.BaseFileService;
 import com.touear.manage.service.BaseSysconfigService;

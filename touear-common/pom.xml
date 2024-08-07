@@ -11,7 +11,7 @@
 
     <groupId>com.touear</groupId>
     <artifactId>touear-common</artifactId>
-    <version>4.0.0.ALPHA</version>
+    <version>${touear.project.version}</version>
     <name>touear-common</name>
     <description>工具类</description>
     <dependencies>

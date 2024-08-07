@@ -6,10 +6,12 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @TableName("base_creator")
 @ApiModel(description = "创作者实体类")
+@NoArgsConstructor
 public class BaseCreatorEntity extends  BaseEntity{
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
