@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.touear</groupId>
+		<artifactId>touear-tool</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>touear-starter-security-shell</artifactId>
+	<name>${project.artifactId}</name>
+	<version>${touear.tool.version}</version>
+	<packaging>jar</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-core-tool</artifactId>
+			<version>${touear.tool.version}</version>
+        </dependency>	
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-ext-jdk15on</artifactId>
+			<version>1.61</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.8.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.touear</groupId>
+			<artifactId>touear-core-cloud</artifactId>
+			<version>${touear.tool.version}</version>
+		</dependency>		
+	</dependencies>
+</project>
