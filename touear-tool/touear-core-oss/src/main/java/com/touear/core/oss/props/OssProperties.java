@@ -2,7 +2,7 @@ package com.touear.core.oss.props;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import com.synjones.core.tool.support.Kv;
+import com.touear.core.tool.support.Kv;
 
 import lombok.Data;
 
@@ -60,7 +60,7 @@ public class OssProperties {
 	/**
 	 * 默认的存储桶名称
 	 */
-	private String bucketName = "berserker";
+	private String bucketName = "touear";
 
 	/**
 	 * 自定义属性

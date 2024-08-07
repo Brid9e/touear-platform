@@ -2,24 +2,23 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>touear-tool</artifactId>
-        <groupId>com.touear</groupId>
-        <version>1.0.0</version>
-    </parent>
+  <parent>
+    <groupId>com.touear</groupId>
+    <artifactId>touear-tool</artifactId>
+    <version>1.0.0</version>
+  </parent>
   <artifactId>touear-core-oss</artifactId>
   <name>${project.artifactId}</name>
-  <version>1.0.0</version>
+  <version>${touear.tool.version}</version>
   <packaging>jar</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-
-      <dependency>
-          <groupId>org.projectlombok</groupId>
-          <artifactId>lombok</artifactId>
-          <scope>provided</scope>
-      </dependency>
+       <dependency>
+           <groupId>com.touear</groupId>
+           <artifactId>touear-core-tool</artifactId>
+           <version>${touear.tool.version}</version>
+       </dependency>
   </dependencies>
 </project>

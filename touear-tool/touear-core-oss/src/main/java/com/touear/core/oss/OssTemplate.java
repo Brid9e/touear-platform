@@ -4,8 +4,10 @@ package com.touear.core.oss;
 import java.io.InputStream;
 import java.util.List;
 
-import com.touear.core.oss.model.OssFile;
+import com.touear.core.oss.model.TouearFile;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.touear.core.oss.model.OssFile;
 
 /**
  * OssTemplate抽象API
@@ -111,7 +113,7 @@ public interface OssTemplate {
 	 * @param file 上传文件类
 	 * @return BladeFile
 	 */
-	BerserkerFile putFile(MultipartFile file);
+	TouearFile putFile(MultipartFile file);
 
 	/**
 	 * 上传文件
@@ -120,7 +122,7 @@ public interface OssTemplate {
 	 * @param fileName 上传文件名
 	 * @return BladeFile
 	 */
-	BerserkerFile putFile(String fileName, MultipartFile file);
+	TouearFile putFile(String fileName, MultipartFile file);
 
 	/**
 	 * 上传文件
@@ -130,7 +132,7 @@ public interface OssTemplate {
 	 * @param file       上传文件类
 	 * @return BladeFile
 	 */
-	BerserkerFile putFile(String bucketName, String fileName, MultipartFile file);
+	TouearFile putFile(String bucketName, String fileName, MultipartFile file);
 
 	/**
 	 * 上传文件
@@ -139,7 +141,7 @@ public interface OssTemplate {
 	 * @param stream   文件流
 	 * @return BladeFile
 	 */
-	BerserkerFile putFile(String fileName, InputStream stream);
+	TouearFile putFile(String fileName, InputStream stream);
 
 	/**
 	 * 上传文件
@@ -149,16 +151,16 @@ public interface OssTemplate {
 	 * @param stream     文件流
 	 * @return BladeFile
 	 */
-	BerserkerFile putFile(String bucketName, String fileName, InputStream stream);
+	TouearFile putFile(String bucketName, String fileName, InputStream stream);
 
 	/**
 	 * 上传文件 (使用参数作为桶名)
 	 * @param bucketName 存储桶名称
 	 * @param fileName   文件名称
 	 * @param stream     文件流
-	 * @return BerserkerFile
+	 * @return TouearFile
 	 */
-	BerserkerFile putFileWithOriginName(String bucketName, String fileName, InputStream stream);
+	TouearFile putFileWithOriginName(String bucketName, String fileName, InputStream stream);
 
 	/**
 	 * 删除文件
@@ -210,7 +212,7 @@ public interface OssTemplate {
 	 * @param bucketName 存储桶名称
 	 * @param fileName   文件名称
 	 * @param stream     文件流
-	 * @return BerserkerFile
+	 * @return TouearFile
 	 */
-	BerserkerFile putFileReFro(String bucketName, String fileName, InputStream stream);
+	TouearFile putFileReFro(String bucketName, String fileName, InputStream stream);
 }

@@ -1,13 +1,5 @@
 package com.touear.starter.minio.config;
 
-import com.synjones.core.oss.config.OssConfiguration;
-import com.synjones.core.oss.props.OssProperties;
-import com.synjones.core.oss.rule.BerserkerOssRule;
-import com.synjones.core.oss.rule.OssRule;
-import com.synjones.starter.minio.MinioTemplate;
-import io.minio.MinioClient;
-import lombok.AllArgsConstructor;
-import lombok.SneakyThrows;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -16,10 +8,19 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.touear.core.oss.config.OssConfiguration;
+import com.touear.core.oss.props.OssProperties;
+import com.touear.core.oss.rule.TouearOssRule;
+import com.touear.core.oss.rule.OssRule;
+import com.touear.starter.minio.MinioTemplate;
+
+import io.minio.MinioClient;
+import lombok.AllArgsConstructor;
+import lombok.SneakyThrows;
+
 /**
  * Minio配置类
  *
- * @author Yang
  */
 @Configuration
 @AllArgsConstructor
@@ -33,7 +34,7 @@ public class MinioConfiguration {
 	@Bean
 	@ConditionalOnMissingBean(OssRule.class)
 	public OssRule ossRule() {
-		return new BerserkerOssRule();
+		return new TouearOssRule();
 	}
 
 	@Bean

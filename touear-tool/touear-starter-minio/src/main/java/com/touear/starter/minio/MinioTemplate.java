@@ -1,22 +1,5 @@
 package com.touear.starter.minio;
 
-
-import com.touear.core.oss.model.OssFile;
-import com.touear.core.oss.model.TouearFile;
-import com.touear.core.oss.props.OssProperties;
-import com.touear.core.oss.rule.OssRule;
-import com.touear.core.oss.utils.Func;
-import com.touear.core.oss.utils.StringPool;
-import com.touear.starter.minio.enums.PolicyType;
-import io.minio.*;
-import io.minio.messages.Bucket;
-import io.minio.messages.DeleteError;
-import io.minio.messages.Item;
-import lombok.AllArgsConstructor;
-import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.multipart.MultipartFile;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -25,10 +8,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.touear.core.oss.model.TouearFile;
+import io.minio.*;
+import io.minio.messages.DeleteError;
+import io.minio.messages.Item;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.touear.core.oss.OssTemplate;
+import com.touear.core.oss.model.OssFile;
+import com.touear.core.oss.props.OssProperties;
+import com.touear.core.oss.rule.OssRule;
+import com.touear.core.tool.utils.Func;
+import com.touear.core.tool.utils.StringPool;
+import com.touear.starter.minio.enums.PolicyType;
+
+import io.minio.messages.Bucket;
+import lombok.AllArgsConstructor;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * MinIOTemplate
  *
- * @author Yang
+ * @author Chen
  */
 @Slf4j
 @AllArgsConstructor
@@ -172,7 +174,7 @@ public class MinioTemplate implements OssTemplate {
 		String originalName = fileName;
 		fileName = getFileName(fileName);
 
-		return putTouearFile(bucketName, fileName, stream, originalName);
+		return putBerserkerFile(bucketName, fileName, stream, originalName);
 	}
 	
 	@Override
@@ -181,15 +183,15 @@ public class MinioTemplate implements OssTemplate {
 		makeBucket(bucketName);
 		String originalName = fileName;
 		fileName = getFileName(fileName);
-		TouearFile putBerserkerFile = putTouearFile(bucketName, fileName, stream, originalName);
-		if(putBerserkerFile != null) {
-			String replace = putBerserkerFile.getLink().replace(ossProperties.getEndpoint(), ossProperties.getForeignAddress());
-			putBerserkerFile.setLink(replace);
+		TouearFile putTouearFile = putBerserkerFile(bucketName, fileName, stream, originalName);
+		if(putTouearFile != null) {
+			String replace = putTouearFile.getLink().replace(ossProperties.getEndpoint(), ossProperties.getForeignAddress());
+			putTouearFile.setLink(replace);
 		}
-		return putBerserkerFile;
+		return putTouearFile;
 	}
 
-	private TouearFile putTouearFile(String bucketName, String fileName, InputStream stream, String originalName) throws Exception {
+	private TouearFile putBerserkerFile(String bucketName, String fileName, InputStream stream, String originalName) throws Exception {
 		try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()){
         	byte[] buffer = new byte[1024];
         	int len;
@@ -257,7 +259,7 @@ public class MinioTemplate implements OssTemplate {
 			client.makeBucket(bucketName);
 			client.setBucketPolicy(bucketName, getPolicyType(bucketName, PolicyType.READ));
         }
-		return putTouearFile(bucketName, fileName, stream, fileName);
+		return putBerserkerFile(bucketName, fileName, stream, fileName);
 	}
 
 	@Override

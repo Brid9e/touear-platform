@@ -1,0 +1,10 @@
+#----------单点登录服务----------#
+#单点登录服务端地址
+sso:
+  server:
+    url: http://server.smart-sso.com:8080
+  timeout: 7200
+  #服务端session管理方式，支持local和redis两种
+  session:
+    manager: redis
+#----------单点登录服务----------#

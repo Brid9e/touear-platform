@@ -1,11 +1,12 @@
 package com.touear.core.oss.config;
 
-import com.touear.core.oss.rule.OssRule;
-import com.touear.core.oss.rule.TouearOssRule;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.touear.core.oss.rule.TouearOssRule;
+import com.touear.core.oss.rule.OssRule;
 
 import lombok.AllArgsConstructor;
 

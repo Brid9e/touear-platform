@@ -16,15 +16,6 @@ public enum OssEnum {
 	 */
 	MINIO("minio", 1),
 
-	/**
-	 * qiniu
-	 */
-	QINIU("qiniu", 2),
-
-	/**
-	 * qiniu
-	 */
-	ALI("ali", 3),
 	;
 
 	final String name;
