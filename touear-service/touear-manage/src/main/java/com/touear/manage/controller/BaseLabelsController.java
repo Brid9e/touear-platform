@@ -22,6 +22,7 @@ public class BaseLabelsController {
 
     @GetMapping("/list")
     public R<IPage<BaseLabelsVo>> getPage(Query query,BaseLabelsEntity labels) {
+
         return R.data(null);
     }
 

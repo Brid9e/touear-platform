@@ -12,4 +12,33 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>touear-auth</name>
     <description>登录服务</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-manage-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-tool</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+
+        <!--JWT-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+
+    </dependencies>
 </project>

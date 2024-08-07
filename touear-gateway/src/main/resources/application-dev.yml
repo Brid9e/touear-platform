@@ -12,12 +12,12 @@ spring:
       routes[0]:
         id: touear-manage
         uri: lb://touear-manage
-        predicates: Path=/*/manage/**
+        predicates: Path=/manage/**
       routes[1]:
         id: touear-auth
         uri: lb://touear-auth
-        predicates: Path=/*/auth/**
+        predicates: Path=/oauth/**
       routes[2]:
         id: touear-client
         uri: lb://touear-client
-        predicates: Path=/*/client/**
+        predicates: Path=/client/**
