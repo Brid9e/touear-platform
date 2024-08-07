@@ -17,7 +17,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.PatternMatchUtils;
 import org.springframework.web.util.HtmlUtils;
-
+import org.springframework.util.StringUtils;
 import com.touear.core.tool.support.StrSpliter;
 
 /**
@@ -25,7 +25,7 @@ import com.touear.core.tool.support.StrSpliter;
  *
  * @author L.cm
  */
-public class StringUtil extends org.springframework.util.StringUtils {
+public class StringUtil extends StringUtils {
 
 	public static final int INDEX_NOT_FOUND = -1;
 	private static final char SEPARATOR = '_';

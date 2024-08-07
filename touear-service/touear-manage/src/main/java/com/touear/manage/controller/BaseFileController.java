@@ -10,6 +10,7 @@ import com.touear.core.tool.api.R;
 import com.touear.core.tool.api.ResultCode;
 import com.touear.core.tool.exception.ServiceException;
 import com.touear.core.tool.utils.Func;
+import com.touear.core.tool.utils.StringPool;
 import com.touear.manage.entity.BaseSysconfig;
 import com.touear.manage.service.BaseFileService;
 import com.touear.manage.service.BaseSysconfigService;
@@ -113,7 +114,7 @@ public class BaseFileController {
 
 				// 使用 FilenameUtils 获取文件后缀
 				String extension = FilenameUtils.getExtension(originalFilename);
-				url = "/" + bucketName + "/" + serviceType + "/"+ Func.randomUuid() +StringPool.DOT + extension;
+				url = "/" + bucketName + "/" + serviceType + "/"+ Func.randomUuid() + StringPool.DOT + extension;
 			}
 
 
@@ -224,11 +225,9 @@ public class BaseFileController {
 	 * 	bucketName 桶名，用于区分上传文件类型
 	 *  fileUrl    文件路径（只包含后半部分），数据示例：/{bucketName}/upload/20200416/d17e88eb6d4c1cce866cb14ae45de8eb.png
 	 * @return
-	 * @author Administrator
-	 * @date 2020-08-06 17:18:04
 	 */
 	@PostMapping("/remove")
-	public R<Boolean> delete(@RequestBody @Validate(paramType = ParamTypeContant.MAP, key = {"bucketName", "fileUrl"}, message = "缺少参数") Map<String, Object> map) {
+	public R<Boolean> delete(@RequestBody   Map<String, Object> map) {
 		try {
 			String bucketName = map.get("bucketName").toString();
 			String fileUrl = map.get("fileUrl").toString();
@@ -252,8 +251,7 @@ public class BaseFileController {
 	 * @param bucketName
 	 * @param base64
 	 * @return
-	 * @author Administrator
-	 * @date 2020-08-06 17:17:49
+
 	 */
 	@PostMapping("/uploadBase64")
 	public R<String> uploadBase64(@RequestParam String bucketName, @RequestBody String base64) {
@@ -263,20 +261,5 @@ public class BaseFileController {
 		return R.fail("配置错误，上传失败！");
 	}
 
-
-	/**
-	* 功能描述：根据租户上传密钥
-	* @Param:
-	 * @param platType: 平台类型
-	 * @param multipartFile: 文件
-	* @Return:
-	* @Author: gaohaidong
-	* @Date: 2023/3/1 17:47
-	*/
-	@PostMapping("/uploadSecretKeyByTen")
-	public R<String> uploadFileByTen(@RequestParam String platType,
-									  @RequestParam("file") MultipartFile multipartFile) {
-		return fileService.uploadFileByTen(platType, multipartFile);
-	}
 
 }

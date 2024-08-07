@@ -4,8 +4,6 @@ package com.touear.manage.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -22,7 +20,7 @@ public class BaseAreaEntity {
     /**
      * 地区编码
      */
-    @JsonSerialize(using = ToStringSerializer.class)
+   // @JsonSerialize(using = ToStringSerializer.class)
     @ApiModelProperty(value = "主键id")
     @TableId(type = IdType.AUTO)
     private Integer code;

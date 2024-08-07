@@ -1,4 +1,4 @@
-package com.touear.gateway.filter;
+package com.touear.gateway.gatewayFilter;
 
 import cn.hutool.core.collection.ConcurrentHashSet;
 import com.touear.constants.CommonConstants;

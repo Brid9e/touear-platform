@@ -1,7 +1,7 @@
 package com.touear.gateway.util;
 
 import com.touear.core.tool.utils.Func;
-import com.touear.gateway.filter.context.GatewayContext;
+import com.touear.gateway.gatewayFilter.context.GatewayContext;
 import com.touear.gateway.provider.AuthProvider;
 import org.springframework.http.HttpCookie;
 import org.springframework.web.server.ServerWebExchange;

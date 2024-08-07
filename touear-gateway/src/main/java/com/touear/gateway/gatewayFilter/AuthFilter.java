@@ -1,11 +1,10 @@
-package com.touear.gateway.filter;
+package com.touear.gateway.gatewayFilter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.touear.common.constant.RedisConstants;
 import com.touear.core.jwt.JwtUtil;
 import com.touear.core.launch.constant.TokenConstant;
-import com.touear.core.tool.api.R;
 import com.touear.core.tool.utils.Func;
 import com.touear.core.tool.utils.StringPool;
 import com.touear.gateway.props.AuthProperties;
@@ -22,7 +21,6 @@ import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
@@ -33,7 +31,7 @@ import reactor.core.publisher.Mono;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
+
 /**
  * 鉴权认证
  *

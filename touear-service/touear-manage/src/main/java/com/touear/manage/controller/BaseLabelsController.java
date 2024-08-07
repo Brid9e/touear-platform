@@ -2,9 +2,11 @@ package com.touear.manage.controller;
 
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.touear.core.tool.api.R;
 import com.touear.manage.entity.BaseLabelsEntity;
 import com.touear.manage.service.BaseLabelsService;
 import com.touear.manage.vo.BaseLabelsVo;
+import com.touear.support.Query;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -13,7 +15,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.touear.support.Condition;
-import javax.management.Query;
+
 
 
 @Api(tags = "标签")
@@ -33,7 +35,7 @@ public class BaseLabelsController {
             @ApiImplicitParam(name = "code", value = "标签code",dataType = "string", required = false),
             @ApiImplicitParam(name = "type", value = "景区标签：0 讲解项目标签：1",required = false)
     })
-    public R<IPage<BaseLabelsVo>> getPage(Query query,BaseLabelsEntity labels) {
+    public R<IPage<BaseLabelsVo>> getPage(Query query, BaseLabelsEntity labels) {
         return R.data(labelsService.getPage(Condition.getPage(query),labels));
     }
 

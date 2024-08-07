@@ -1,4 +1,4 @@
-package com.touear.gateway.filter;
+package com.touear.gateway.gatewayFilter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

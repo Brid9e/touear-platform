@@ -16,5 +16,4 @@ public class BaseLabelsEntity extends  BaseEntity{
     private String labelName;
     @ApiModelProperty(value = "标签类型（景区标签：0 讲解项目标签：1）")
     private String type;
-
 }

@@ -1,4 +1,4 @@
-package com.touear.gateway.filter;
+package com.touear.gateway.gatewayFilter;
 
 import com.touear.core.tool.utils.Func;
 import lombok.extern.slf4j.Slf4j;

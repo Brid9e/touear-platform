@@ -1,4 +1,4 @@
-package com.touear.gateway.filter;
+package com.touear.gateway.gatewayFilter;
 
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Joiner;
@@ -32,7 +32,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import com.touear.gateway.filter.context.GatewayContext;
+import com.touear.gateway.gatewayFilter.context.GatewayContext;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Date;

@@ -3,7 +3,6 @@ package com.touear.common.enums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.util.StringUtils;
 
 /**
  * @Title: minioBucketEnum.java

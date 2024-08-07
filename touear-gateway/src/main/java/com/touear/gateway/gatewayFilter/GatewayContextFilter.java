@@ -1,7 +1,7 @@
-package com.touear.gateway.filter;
+package com.touear.gateway.gatewayFilter;
 
 import com.alibaba.fastjson.JSONObject;
-import com.touear.gateway.filter.context.GatewayContext;
+import com.touear.gateway.gatewayFilter.context.GatewayContext;
 import io.netty.buffer.ByteBufAllocator;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
