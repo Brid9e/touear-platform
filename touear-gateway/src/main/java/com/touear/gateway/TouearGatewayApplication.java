@@ -1,20 +1,15 @@
 package com.touear.gateway;
 
-import com.touear.TouearApplication;
-import com.touear.core.cloud.feign.EnableBerserkerFeign;
-import com.touear.core.launch.constant.AppConstant;
-import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@EnableHystrix
-@EnableScheduling
-@EnableBerserkerFeign
-@SpringCloudApplication
+@SpringBootApplication
+@EnableDiscoveryClient
 public class TouearGatewayApplication {
 
     public static void main(String[] args) {
-        TouearApplication.run(AppConstant.APPLICATION_GATEWAY_NAME, TouearGatewayApplication.class, args);
+        SpringApplication.run(TouearGatewayApplication.class, args);
     }
 
 }
