@@ -4,13 +4,13 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.touear.core.tool.utils.Func;
 import com.touear.core.tool.utils.StringPool;
 import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Map;
 
 /**
  * 定义常用的 sql关键字
  *
- * @author Chen
  */
 public class SqlKeyword {
 	private final static String SQL_REGEX = "'|%|--|insert|delete|select|count|group|union|drop|truncate|alter|grant|execute|exec|xp_cmdshell|call|declare|sql";

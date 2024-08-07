@@ -9,7 +9,7 @@ import java.util.List;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.touear.core.tool.utils.StringPool;
-import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 文件工具类
@@ -60,7 +60,7 @@ public class TouearFileUtil {
 		String fileExt = getFileExt(fileName);
 
 		String ext = extMap.get(dir);
-		if (StringUtil.isBlank(ext) || ext.indexOf(fileExt) == -1) {
+		if (StringUtils.isBlank(ext) || ext.indexOf(fileExt) == -1) {
 			return false;
 		}
 		return true;

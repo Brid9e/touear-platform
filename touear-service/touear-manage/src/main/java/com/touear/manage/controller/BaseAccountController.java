@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
+import com.touear.core.tool.api.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.touear.manage.entity.BaseAccountEntity;
 import com.touear.manage.service.BaseAccountService;
-import com.touear.common.utils.R;
+
 
 
 

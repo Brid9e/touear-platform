@@ -17,8 +17,9 @@
 package com.touear.core.cloud.request;
 
 
-import com.touear.core.tool.utils.StringUtil;
+
 import com.touear.core.tool.utils.WebUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 
@@ -105,7 +106,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
 	@Override
 	public String getParameter(String name) {
 		String value = super.getParameter(xssEncode(name));
-		if (StringUtil.isNotBlank(value)) {
+		if (StringUtils.isNotBlank(value)) {
 			value = xssEncode(value);
 		}
 		return value;
@@ -141,7 +142,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
 	@Override
 	public String getHeader(String name) {
 		String value = super.getHeader(xssEncode(name));
-		if (StringUtil.isNotBlank(value)) {
+		if (StringUtils.isNotBlank(value)) {
 			value = xssEncode(value);
 		}
 		return value;

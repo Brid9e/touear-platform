@@ -1,6 +1,6 @@
 package com.touear.manage.controller;
 
-import com.touear.common.constant.ParamTypeContant;
+
 import com.touear.common.enums.FileType;
 import com.touear.common.enums.MinioBucketEnum;
 import com.touear.common.enums.ServiceType;

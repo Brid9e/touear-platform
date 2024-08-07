@@ -3,6 +3,7 @@ package com.touear.core.tool.support;
 import com.touear.core.tool.utils.Func;
 import com.touear.core.tool.utils.StringPool;
 import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -148,7 +149,7 @@ public class StrSpliter {
 	 * @since 3.2.1
 	 */
 	public static List<String> split(String str, char separator, int limit, boolean isTrim, boolean ignoreEmpty, boolean ignoreCase) {
-		if (StringUtil.isEmpty(str)) {
+		if (StringUtils.isEmpty(str)) {
 			return new ArrayList<String>(0);
 		}
 		if (limit == 1) {
@@ -287,14 +288,14 @@ public class StrSpliter {
 	 * @since 3.2.1
 	 */
 	public static List<String> split(String str, String separator, int limit, boolean isTrim, boolean ignoreEmpty, boolean ignoreCase) {
-		if (StringUtil.isEmpty(str)) {
+		if (StringUtils.isEmpty(str)) {
 			return new ArrayList<String>(0);
 		}
 		if (limit == 1) {
 			return addToList(new ArrayList<String>(1), str, isTrim, ignoreEmpty);
 		}
 
-		if (StringUtil.isEmpty(separator)) {
+		if (StringUtils.isEmpty(separator)) {
 			return split(str, limit);
 		} else if (separator.length() == 1) {
 			return split(str, separator.charAt(0), limit, isTrim, ignoreEmpty, ignoreCase);
@@ -349,7 +350,7 @@ public class StrSpliter {
 	 * @since 3.0.8
 	 */
 	public static List<String> split(String str, int limit) {
-		if (StringUtil.isEmpty(str)) {
+		if (StringUtils.isEmpty(str)) {
 			return new ArrayList<String>(0);
 		}
 		if (limit == 1) {
@@ -397,7 +398,7 @@ public class StrSpliter {
 	 * @since 3.0.8
 	 */
 	public static List<String> split(String str, Pattern separatorPattern, int limit, boolean isTrim, boolean ignoreEmpty) {
-		if (StringUtil.isEmpty(str)) {
+		if (StringUtils.isEmpty(str)) {
 			return new ArrayList<String>(0);
 		}
 		if (limit == 1) {

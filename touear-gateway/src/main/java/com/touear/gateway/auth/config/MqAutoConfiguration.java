@@ -1,6 +1,6 @@
 package com.touear.gateway.auth.config;
 
-import com.synjones.common.constant.RabbitConstant.Log;
+import com.touear.common.constant.RabbitConstant.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

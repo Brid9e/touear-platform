@@ -1,16 +1,12 @@
 package com.touear.gateway.location;
 
-import com.google.common.collect.Lists;
 import com.touear.gateway.props.AuthorityResource;
-import com.touear.gateway.props.IpLimitApi;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteDefinitionLocator;
 import org.springframework.security.access.ConfigAttribute;
-import org.springframework.security.access.SecurityConfig;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -57,15 +53,6 @@ public class ResourceLocator  /*implements ApplicationListener<RemoteRefreshRout
 	 */
 	private List<AuthorityResource> authorityResources;
 
-	/**
-	 * ip黑名单
-	 */
-	private List<IpLimitApi> ipBlacks;
-
-	/**
-	 * ip白名单
-	 */
-	private List<IpLimitApi> ipWhites;
 
 	/**
 	 * 权限列表
@@ -83,8 +70,7 @@ public class ResourceLocator  /*implements ApplicationListener<RemoteRefreshRout
 
 	public ResourceLocator() {
 		authorityResources = new CopyOnWriteArrayList<>();
-		ipBlacks = new CopyOnWriteArrayList<>();
-		ipWhites = new CopyOnWriteArrayList<>();
+
 	}
 
 
@@ -147,22 +133,7 @@ public class ResourceLocator  /*implements ApplicationListener<RemoteRefreshRout
 		this.authorityResources = authorityResources;
 	}
 
-	public List<IpLimitApi> getIpBlacks() {
-		return ipBlacks;
-	}
-
-	public void setIpBlacks(List<IpLimitApi> ipBlacks) {
-		this.ipBlacks = ipBlacks;
-	}
-
-	public List<IpLimitApi> getIpWhites() {
-		return ipWhites;
-	}
-
-	public void setIpWhites(List<IpLimitApi> ipWhites) {
-		this.ipWhites = ipWhites;
-	}
-
+	
 	public Map<String, Collection<ConfigAttribute>> getConfigAttributes() {
 		return configAttributes;
 	}

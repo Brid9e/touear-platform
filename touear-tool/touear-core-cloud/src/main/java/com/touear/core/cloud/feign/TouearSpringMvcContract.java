@@ -4,6 +4,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.cloud.openfeign.AnnotatedParameterProcessor;
 import org.springframework.cloud.openfeign.support.SpringMvcContract;
 import org.springframework.core.annotation.AnnotatedElementUtils;
@@ -16,7 +17,7 @@ import com.touear.core.cloud.annotation.ApiVersion;
 import com.touear.core.cloud.annotation.UrlVersion;
 import com.touear.core.cloud.version.BerserkerMediaType;
 import com.touear.core.tool.utils.StringPool;
-import com.touear.core.tool.utils.StringUtil;
+
 
 import feign.MethodMetadata;
 
@@ -40,10 +41,10 @@ public class TouearSpringMvcContract extends SpringMvcContract {
 			// url 上的版本，优先获取方法上的版本
 			UrlVersion urlVersion = AnnotatedElementUtils.findMergedAnnotation(method, UrlVersion.class);
 			// 再次尝试类上的版本
-			if (urlVersion == null || StringUtil.isBlank(urlVersion.value())) {
+			if (urlVersion == null || StringUtils.isBlank(urlVersion.value())) {
 				urlVersion = AnnotatedElementUtils.findMergedAnnotation(targetType, UrlVersion.class);
 			}
-			if (urlVersion != null && StringUtil.isNotBlank(urlVersion.value())) {
+			if (urlVersion != null && StringUtils.isNotBlank(urlVersion.value())) {
 				String versionUrl = "/" + urlVersion.value();
 				data.template().uri(versionUrl);
 			}
@@ -54,10 +55,10 @@ public class TouearSpringMvcContract extends SpringMvcContract {
 			// 处理 Media Types 版本信息
 			ApiVersion apiVersion = AnnotatedElementUtils.findMergedAnnotation(method, ApiVersion.class);
 			// 再次尝试类上的版本
-			if (apiVersion == null || StringUtil.isBlank(apiVersion.value())) {
+			if (apiVersion == null || StringUtils.isBlank(apiVersion.value())) {
 				apiVersion = AnnotatedElementUtils.findMergedAnnotation(targetType, ApiVersion.class);
 			}
-			if (apiVersion != null && StringUtil.isNotBlank(apiVersion.value())) {
+			if (apiVersion != null && StringUtils.isNotBlank(apiVersion.value())) {
 				BerserkerMediaType BladeMediaType = new BerserkerMediaType(apiVersion.value());
 				data.template().header(HttpHeaders.ACCEPT, BladeMediaType.toString());
 			}

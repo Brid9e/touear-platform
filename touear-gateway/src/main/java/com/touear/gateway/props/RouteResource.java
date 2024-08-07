@@ -1,6 +1,6 @@
 package com.touear.gateway.props;
 
-import com.synjones.core.launch.constant.AppConstant;
+import com.touear.core.launch.constant.AppConstant;
 import lombok.Data;
 
 @Data

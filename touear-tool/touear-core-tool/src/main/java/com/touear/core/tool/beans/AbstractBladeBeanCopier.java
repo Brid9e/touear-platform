@@ -29,7 +29,7 @@ import org.springframework.cglib.core.TypeUtils;
 import com.touear.core.tool.utils.BeanUtil;
 import com.touear.core.tool.utils.ClassUtil;
 import com.touear.core.tool.utils.ReflectUtil;
-import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * spring cglib 魔改
@@ -179,7 +179,7 @@ public abstract class AbstractBladeBeanCopier {
 					}
 					// 注解上的别名，如果别名不为空，使用别名
 					String aliasTargetPropName = targetIgnoreCopy.value();
-					if (StringUtil.isNotBlank(aliasTargetPropName)) {
+					if (StringUtils.isNotBlank(aliasTargetPropName)) {
 						propName = aliasTargetPropName;
 					}
 				}
@@ -323,7 +323,7 @@ public abstract class AbstractBladeBeanCopier {
 					}
 					// 注解上的别名
 					String aliasTargetPropName = targetIgnoreCopy.value();
-					if (StringUtil.isNotBlank(aliasTargetPropName)) {
+					if (StringUtils.isNotBlank(aliasTargetPropName)) {
 						propName = aliasTargetPropName;
 					}
 				}

@@ -1,9 +1,9 @@
 package com.touear.gateway.auth.config;
 
-import com.synjones.core.tool.utils.Func;
-import com.synjones.gateway.handler.SwaggerResourceHandler;
-import com.synjones.gateway.props.DomainProperties;
-import com.synjones.gateway.props.RouteProperties;
+import com.touear.core.tool.utils.Func;
+import com.touear.gateway.handler.SwaggerResourceHandler;
+import com.touear.gateway.props.DomainProperties;
+import com.touear.gateway.props.RouteProperties;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -38,7 +38,7 @@ public class RouterFunctionConfiguration {
 
 	private DomainProperties ossProperties;
 
-	private static final String ALLOWED_HEADERS = "x-requested-with,device-token, synjones-auth, Content-Type, Authorization, credential, X-XSRF-TOKEN, token, username, client,x_requested_with, synAccessSource";
+	private static final String ALLOWED_HEADERS = "x-requested-with,device-token, touear-auth, Content-Type, Authorization, credential, X-XSRF-TOKEN, token, username, client,x_requested_with, synAccessSource";
 //	private static final String ALLOWED_HEADERS = "*";
 	private static final String ALLOWED_METHODS = "*";
 	private static final String ALLOWED_ORIGIN = "*";
@@ -81,20 +81,7 @@ public class RouterFunctionConfiguration {
 			return chain.filter(ctx);
 		};
 	}
-	
-/*    @Bean
-    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
-        
-        http
-        .httpBasic().disable()
-        .csrf().disable()
-        .authorizeExchange()
-        .pathMatchers("/").permitAll()
-        // 动态权限验证
-        .anyExchange().access(accessManager);
-        return http.build();
-    }
-	*/
+
 	
 	/**
 	 * 解决springboot2.0.5版本出现的 Only one connection receive subscriber allowed.

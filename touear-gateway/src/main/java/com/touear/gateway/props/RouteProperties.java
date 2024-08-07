@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @RefreshScope
-@ConfigurationProperties("berserker.document")
+@ConfigurationProperties("touear.document")
 public class RouteProperties {
 
 	private final List<RouteResource> resources = new ArrayList<>();

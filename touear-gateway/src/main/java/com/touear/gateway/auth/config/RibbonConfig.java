@@ -8,8 +8,6 @@ import org.springframework.context.annotation.Scope;
 /**
  * @Title: RibbonConfig.java
  * @Description: RibbonConfig
- * @author chenl
- * @date 2021-01-20 13:56:34
  * @version 1.0
  */
 @Configuration

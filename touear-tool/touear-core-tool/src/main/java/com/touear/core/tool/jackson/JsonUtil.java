@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import com.touear.core.tool.utils.DateUtil;
 import com.touear.core.tool.utils.Exceptions;
 import com.touear.core.tool.utils.StringPool;
-import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -180,7 +180,7 @@ public class JsonUtil {
 	public static <T> List<T> parseArray(String content, Class<T> valueTypeRef) {
 		try {
 
-			if (!StringUtil.startsWithIgnoreCase(content, StringPool.LEFT_SQ_BRACKET)) {
+			if (!StringUtils.startsWithIgnoreCase(content, StringPool.LEFT_SQ_BRACKET)) {
 				content = StringPool.LEFT_SQ_BRACKET + content + StringPool.RIGHT_SQ_BRACKET;
 			}
 

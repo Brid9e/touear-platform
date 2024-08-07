@@ -33,8 +33,6 @@ public class OpenGlobalExceptionHandler {
      * AuthenticationException
      *
      * @param ex
-     * @param request
-     * @param response
      * @return
      */
     @ExceptionHandler({AuthenticationException.class})
@@ -42,38 +40,11 @@ public class OpenGlobalExceptionHandler {
         return resolveException(ex);
     }
 
-    /**
-     * OAuth2Exception
-     *
-     * @param ex
-     * @param request
-     * @param response
-     * @return
-     */
-    @ExceptionHandler({OAuth2Exception.class, InvalidTokenException.class})
-    public static R oauth2Exception(Exception ex) {
-        return resolveException(ex);
-    }
-
-    /**
-     * 自定义异常
-     *
-     * @param ex
-     * @param request
-     * @param response
-     * @return
-     */
-    @ExceptionHandler({OpenException.class})
-    public static R openException(Exception ex) {
-        return resolveException(ex);
-    }
 
     /**
      * 其他异常
      *
      * @param ex
-     * @param request
-     * @param response
      * @return
      */
     @ExceptionHandler({Exception.class})

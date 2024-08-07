@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.ser.BeanPropertyWriter;
 import com.fasterxml.jackson.databind.ser.BeanSerializerModifier;
-import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import com.touear.core.tool.utils.StringPool;
 
 import java.io.IOException;
@@ -75,7 +75,7 @@ public class BladeBeanSerializerModifier extends BeanSerializerModifier {
         JsonSerializer<Object> NUMBER_JSON_SERIALIZER = new JsonSerializer<Object>() {
             @Override
             public void serialize(Object value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
-                gen.writeNumber(StringUtil.INDEX_NOT_FOUND);
+                gen.writeNumber(StringUtils.INDEX_NOT_FOUND);
             }
         };
 

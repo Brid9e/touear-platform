@@ -3,7 +3,7 @@ package com.touear.core.cloud.version;
 import com.touear.core.cloud.annotation.ApiVersion;
 import com.touear.core.cloud.annotation.UrlVersion;
 import com.touear.core.tool.utils.StringPool;
-import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.lang.Nullable;
 import org.springframework.web.method.HandlerMethod;
@@ -43,17 +43,17 @@ public class BerserkerRequestMappingHandlerMapping extends RequestMappingHandler
 		// url 上的版本，优先获取方法上的版本
 		UrlVersion urlVersion = AnnotatedElementUtils.findMergedAnnotation(method, UrlVersion.class);
 		// 再次尝试类上的版本
-		if (urlVersion == null || StringUtil.isBlank(urlVersion.value())) {
+		if (urlVersion == null || StringUtils.isBlank(urlVersion.value())) {
 			urlVersion = AnnotatedElementUtils.findMergedAnnotation(handlerType, UrlVersion.class);
 		}
 		// Media Types 版本信息
 		ApiVersion apiVersion = AnnotatedElementUtils.findMergedAnnotation(method, ApiVersion.class);
 		// 再次尝试类上的版本
-		if (apiVersion == null || StringUtil.isBlank(apiVersion.value())) {
+		if (apiVersion == null || StringUtils.isBlank(apiVersion.value())) {
 			apiVersion = AnnotatedElementUtils.findMergedAnnotation(handlerType, ApiVersion.class);
 		}
-		boolean nonUrlVersion = urlVersion == null || StringUtil.isBlank(urlVersion.value());
-		boolean nonApiVersion = apiVersion == null || StringUtil.isBlank(apiVersion.value());
+		boolean nonUrlVersion = urlVersion == null || StringUtils.isBlank(urlVersion.value());
+		boolean nonApiVersion = apiVersion == null || StringUtils.isBlank(apiVersion.value());
 		// 先判断同时不纯在
 		if (nonUrlVersion && nonApiVersion) {
 			return null;

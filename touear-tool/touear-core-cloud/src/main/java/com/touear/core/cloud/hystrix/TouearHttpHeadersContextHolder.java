@@ -1,7 +1,7 @@
 package com.touear.core.cloud.hystrix;
 
 import com.touear.core.cloud.props.BladeHystrixHeadersProperties;
-import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import com.touear.core.tool.utils.WebUtil;
 import org.springframework.core.NamedThreadLocal;
 import org.springframework.http.HttpHeaders;
@@ -55,7 +55,7 @@ public class TouearHttpHeadersContextHolder {
 		// 如果配置有 account 读取器
 		if (accountGetter != null) {
 			String xAccountHeader = accountGetter.get(request);
-			if (StringUtil.isNotBlank(xAccountHeader)) {
+			if (StringUtils.isNotBlank(xAccountHeader)) {
 				headers.add(accountHeaderName, xAccountHeader);
 			}
 		}
@@ -73,7 +73,7 @@ public class TouearHttpHeadersContextHolder {
 				if (allowHeadsList.contains(key) || allowed.contains(key) || PatternMatchUtils.simpleMatch(pattern, key)) {
 					String values = request.getHeader(key);
 					// header value 不为空的 传递
-					if (StringUtil.isNotBlank(values)) {
+					if (StringUtils.isNotBlank(values)) {
 						headers.add(key, values);
 					}
 				}

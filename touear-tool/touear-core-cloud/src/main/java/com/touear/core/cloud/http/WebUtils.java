@@ -5,7 +5,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.google.common.net.HttpHeaders;
 import com.touear.core.tool.utils.EncodeUtils;
 import com.touear.core.tool.utils.SpringContextHolder;
-import com.touear.core.tool.utils.StringUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.MediaType;
 import org.springframework.util.Assert;
@@ -40,7 +39,7 @@ public class WebUtils {
     /**
      * 静态文件后缀
      */
-    private final static String[] staticFiles = StringUtil.split(staticSuffix, ",");
+    private final static String[] staticFiles = StringUtils.split(staticSuffix, ",");
 
     /**
      * 动态映射URL后缀
@@ -380,7 +379,7 @@ public class WebUtils {
         } else if (MediaType.APPLICATION_JSON_VALUE.equals(contentType) || MediaType.APPLICATION_JSON_UTF8_VALUE.equals(contentType)) {
             // json表单
             String body = getBodyString(request);
-            if (StringUtil.isNotBlank(body)) {
+            if (StringUtils.isNotBlank(body)) {
                 try {
                     returnMap = JSONObject.parseObject(body, Map.class);
                 } catch (Exception e) {

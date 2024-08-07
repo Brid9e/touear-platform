@@ -6,6 +6,7 @@ import com.touear.core.tool.constant.ErrorCode;
 import com.touear.core.tool.utils.Func;
 import com.touear.core.tool.utils.ReactiveIpAddressMatcher;
 import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import com.touear.gateway.location.ResourceLocator;
 import com.touear.gateway.props.AuthProperties;
 import com.touear.gateway.props.AuthorityResource;
@@ -154,10 +155,10 @@ public class AccessManager implements ReactiveAuthorizationManager<Authorization
 				}
 			}
 			log.debug("mathAuthorities result[{}] expires[{}]", result, expires);
-			if (expires > 0) {
-				// 授权已过期
-				throw new AccessDeniedException(ErrorCode.ACCESS_DENIED_AUTHORITY_EXPIRED.getMessage());
-			}
+//			if (expires > 0) {
+//				// 授权已过期
+//				throw new AccessDeniedException(ErrorCode.ACCESS_DENIED_AUTHORITY_EXPIRED.getMessage());
+//			}
 			return result > 0;
 		}
 	}

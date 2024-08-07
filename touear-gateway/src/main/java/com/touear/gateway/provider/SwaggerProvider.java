@@ -1,7 +1,7 @@
 package com.touear.gateway.provider;
 
-import com.synjones.gateway.props.RouteProperties;
-import com.synjones.gateway.props.RouteResource;
+import com.touear.gateway.props.RouteProperties;
+import com.touear.gateway.props.RouteResource;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Primary;

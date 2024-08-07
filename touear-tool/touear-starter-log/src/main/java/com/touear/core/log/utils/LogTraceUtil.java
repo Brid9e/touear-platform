@@ -1,6 +1,7 @@
 package com.touear.core.log.utils;
 
 import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.MDC;
 
 

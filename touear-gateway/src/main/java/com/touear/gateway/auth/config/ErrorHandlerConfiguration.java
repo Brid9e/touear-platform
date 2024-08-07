@@ -1,6 +1,6 @@
 package com.touear.gateway.auth.config;
 
-import com.synjones.gateway.handler.ErrorExceptionHandler;
+import com.touear.gateway.handler.ErrorExceptionHandler;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.web.ResourceProperties;

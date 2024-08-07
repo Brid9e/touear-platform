@@ -9,7 +9,7 @@ import com.touear.core.secure.annotation.PreAuth;
 import com.touear.core.secure.auth.AuthFun;
 import com.touear.core.tool.api.ResultCode;
 import com.touear.core.tool.utils.ClassUtil;
-import com.touear.core.tool.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -65,7 +65,7 @@ public class AuthAspect implements ApplicationContextAware {
 		PreAuth preAuth = ClassUtil.getAnnotation(method, PreAuth.class);
 		// 判断表达式
 		String condition = preAuth.value();
-		if (StringUtil.isNotBlank(condition)) {
+		if (StringUtils.isNotBlank(condition)) {
 			Expression expression = SPEL_PARSER.parseExpression(condition);
 			// 方法参数值
 			Object[] args = point.getArgs();
