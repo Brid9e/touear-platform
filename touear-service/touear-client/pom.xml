@@ -47,11 +47,11 @@
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.touear</groupId>
-            <artifactId>touear-starter-mq</artifactId>
-            <version>${touear.tool.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.touear</groupId>-->
+<!--            <artifactId>touear-starter-mq</artifactId>-->
+<!--            <version>${touear.tool.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.touear</groupId>
             <artifactId>touear-common</artifactId>
