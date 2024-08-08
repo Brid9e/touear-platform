@@ -17,12 +17,27 @@
         <dependency>
             <groupId>com.touear</groupId>
             <artifactId>touear-manage-api</artifactId>
-            <version>1.0.0</version>
+            <version>${touear.project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.touear</groupId>
-            <artifactId>touear-tool</artifactId>
-            <version>1.0.0</version>
+            <artifactId>touear-core-tool</artifactId>
+            <version>${touear.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-starter-redis</artifactId>
+            <version>${touear.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-starter-mybatis</artifactId>
+            <version>${touear.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-core-cloud</artifactId>
+            <version>${touear.tool.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

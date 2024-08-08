@@ -1,17 +1,19 @@
 package com.touear.client;
 
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import com.touear.TouearApplication;
+import com.touear.core.cloud.feign.EnableTouearFeign;
+import com.touear.core.launch.constant.AppConstant;
+import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication
-@EnableDiscoveryClient
-@MapperScan("com.touear.client.mapper")
+@EnableHystrix
+@EnableScheduling
+@EnableTouearFeign
+@SpringCloudApplication
 public class TouearClientApplication {
-
     public static void main(String[] args) {
-        SpringApplication.run(TouearClientApplication.class, args);
+        TouearApplication.run(AppConstant.APPLICATION_CLIENT_NAME, TouearClientApplication.class, args);
     }
 
 }

@@ -11,10 +11,12 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import com.touear.manage.service.BaseAccountService;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service("baseAccountService")
 @Slf4j
+@Transactional(rollbackFor = Exception.class)
 public class BaseAccountServiceImpl extends ServiceImpl<BaseAccountMapper, BaseAccountEntity> implements BaseAccountService {
 
     @Override

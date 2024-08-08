@@ -6,9 +6,9 @@ import java.util.Map;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
 import com.touear.core.tool.api.R;
+import com.touear.manage.feign.BaseAccountClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,13 +27,17 @@ import com.touear.manage.service.BaseAccountService;
  */
 @Slf4j
 @RestController
-@RequestMapping("manage/baseaccount")
-public class BaseAccountController {
+@RequestMapping("/baseaccount")
+public class BaseAccountController implements BaseAccountClient {
+
     @Autowired
     private BaseAccountService baseAccountService;
-    @GetMapping(value = "/{id}")
-    public BaseAccountEntity queryById(@PathVariable("id") Long id) {
-        return baseAccountService.queryById(id);
+
+
+    @GetMapping(value = "/getById")
+    @Override
+    public R<BaseAccountEntity> queryById(@RequestParam Long id) {
+        return R.data(baseAccountService.queryById(id));
     }
 
     @GetMapping(value = "fromUserName/{userName}")

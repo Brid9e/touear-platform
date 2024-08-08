@@ -1,6 +1,7 @@
 package com.touear.auth.feign;
 
-import com.touear.common.utils.R;
+
+import com.touear.core.tool.api.R;
 import com.touear.manage.entity.BaseAccountEntity;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;

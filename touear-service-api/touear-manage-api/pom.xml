@@ -11,6 +11,27 @@
 
     <artifactId>touear-manage-api</artifactId>
     <name>touear-manage-api</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-core-launch</artifactId>
+            <version>${touear.tool.version}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>com.touear</groupId>
+            <artifactId>touear-core-tool</artifactId>
+            <version>${touear.tool.version}</version>
+        </dependency>
+    </dependencies>
     <version>${touear.project.version}</version>
     <url>http://maven.apache.org</url>
     <properties>
