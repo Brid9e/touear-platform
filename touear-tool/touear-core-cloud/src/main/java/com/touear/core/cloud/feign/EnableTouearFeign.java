@@ -15,7 +15,7 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @EnableFeignClients(AppConstant.BASE_PACKAGES)
-public @interface EnableBerserkerFeign {
+public @interface EnableTouearFeign {
 	/**
 	 * Alias for the {@link #basePackages()} attribute. Allows for more concise annotation
 	 * declarations e.g.: {@code @ComponentScan("org.my.pkg")} instead of
