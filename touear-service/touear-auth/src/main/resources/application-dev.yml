@@ -1,11 +1,5 @@
 spring:
   datasource:
-    url: jdbc:mysql://121.41.87.122:3306/base?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    username: root
-    password: qq258741
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 121.41.87.122:8848
-  application:
-    name: touear-auth
+    url: ${touear.mysql.url}
+    username: ${touear.mysql.username}
+    password: ${touear.mysql.password}

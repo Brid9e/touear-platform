@@ -8,10 +8,8 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * @Title: IFeeItemClientFallback.java
- * @Description: IFeeItemClientFallback
- * @author XueGang
- * @date 2024-07-22
+ * @Title: IBaseAccountClientFallback.java
+ * @Description: IBaseAccountClientFallback
  * @version 1.0
  */
 @Component
